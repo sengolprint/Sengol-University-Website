@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --ivory: #f8f3ea;
+  --cream: #fffaf2;
+  --navy: #13233f;
+  --navy-2: #1a2f54;
+  --gold: #c99a3d;
+  --gold-soft: #e5c47d;
+  --maroon: #7a1f2d;
+  --ink: #1b2430;
+  --muted: #6e7480;
+  --line: #e8dfd1;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+.container-shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.serif { font-family: Georgia, 'Times New Roman', serif; }
+
+.glass {
+  background: rgba(255,255,255,.78);
+  backdrop-filter: blur(18px);
+  border: 1px solid rgba(255,255,255,.58);
+}
+
+.soft-shadow { box-shadow: 0 18px 60px rgba(25, 35, 55, .10); }
+.gold-line { height: 2px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
+
+.hero-bg {
+  background:
+    linear-gradient(90deg, rgba(19,35,63,.92) 0%, rgba(19,35,63,.78) 42%, rgba(19,35,63,.28) 72%, rgba(19,35,63,.08) 100%),
+    url('https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=85') center/cover no-repeat;
+}
+
+.section-pad { padding: 88px 0; }
+.card-lift { transition: transform .25s ease, box-shadow .25s ease; }
+.card-lift:hover { transform: translateY(-5px); box-shadow: 0 18px 42px rgba(19,35,63,.12); }
+
+.btn-primary,
+.btn-secondary,
+.btn-maroon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  transition: .2s ease;
+}
+.btn-primary { background: var(--gold); color: #172238; }
+.btn-primary:hover { background: var(--gold-soft); }
+.btn-secondary { border: 1px solid rgba(255,255,255,.55); color: white; background: rgba(255,255,255,.08); }
+.btn-secondary:hover { background: rgba(255,255,255,.15); }
+.btn-maroon { background: var(--maroon); color: white; }
+.btn-maroon:hover { filter: brightness(1.08); }
+
+@media (max-width: 900px) {
+  .section-pad { padding: 64px 0; }
+  .hero-bg { background-position: 62% center; }
+}
