@@ -12,6 +12,8 @@ const nav = [
   ["Contact", "/contact"],
 ];
 
+const officialLogo = "https://www.sengolinternationaluniversity.edu.in/assets/logo.f9c66d3b.png";
+
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
 
@@ -30,8 +32,12 @@ export default function SiteHeader() {
       <header className="sticky top-0 z-50 border-b border-[#eadfce] bg-[#fffaf2]/95 backdrop-blur-xl">
         <div className="container-shell flex min-h-20 items-center justify-between gap-5">
           <Link href="/" className="flex items-center gap-3">
-            <div className="relative grid h-12 w-12 shrink-0 place-items-center rounded-full border-2 border-[#c99a3d] bg-[#13233f] shadow-sm">
-              <span className="serif text-lg font-bold text-[#e5c47d]">SIU</span>
+            <div className="flex h-16 w-[86px] shrink-0 items-center justify-center overflow-hidden rounded-xl bg-white/70 p-1.5 shadow-sm ring-1 ring-[#eadfce]">
+              <img
+                src={officialLogo}
+                alt="Sengol International University logo"
+                className="h-full w-full object-contain mix-blend-multiply"
+              />
             </div>
             <div className="hidden sm:block">
               <div className="serif text-lg font-bold leading-tight text-[#13233f] md:text-xl">Sengol International University</div>
