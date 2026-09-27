@@ -1,0 +1,18 @@
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
+import Link from "next/link";
+
+export default function AboutPage(){
+  const values=[
+    ["Himalayan Excellence","A peaceful Sikkim setting designed to support focused learning and research."],
+    ["Academic Diversity","Undergraduate, postgraduate and doctoral pathways across a wide range of disciplines."],
+    ["Innovation & Values","Modern education strengthened by practical learning, ethics and responsible leadership."],
+    ["Global Perspective","A forward-looking academic environment with emphasis on collaboration and wider exposure."],
+  ];
+  return <main><SiteHeader/>
+    <section className="page-hero py-24 text-white"><div className="container-shell max-w-4xl"><div className="eyebrow !text-[#e5c47d]">Our University</div><h1 className="serif mt-4 text-5xl font-bold md:text-6xl">About Sengol International University</h1><p className="mt-6 max-w-3xl text-lg leading-8 text-white/70">A State Private University established by Act No. 14 of 2025 of the Sikkim State Legislative Assembly and recognized under Section 2(F) of the UGC Act, 1956.</p></div></section>
+    <section className="section-pad"><div className="container-shell grid gap-12 lg:grid-cols-2 lg:items-center"><div><div className="eyebrow">Purpose</div><h2 className="section-title">Education that transforms knowledge into impact.</h2><p className="section-copy">Located in Sikkim, the university is committed to academic excellence, holistic development, innovation and research-driven education. Its learning environment is designed to help students grow intellectually, professionally and personally.</p><div className="mt-8 grid gap-4 sm:grid-cols-2"><div className="rounded-3xl bg-white p-6 soft-shadow"><div className="font-bold text-[#7a1f2d]">Mission</div><p className="mt-2 leading-7 text-[#687080]">Educate, Empower, Excel — creating future leaders through innovative education and holistic development.</p></div><div className="rounded-3xl bg-white p-6 soft-shadow"><div className="font-bold text-[#7a1f2d]">Vision</div><p className="mt-2 leading-7 text-[#687080]">Building a better future through education and inspiring minds to create positive global impact.</p></div></div></div><img className="h-[520px] w-full rounded-[30px] object-cover soft-shadow" src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?auto=format&fit=crop&w=1200&q=85" alt="Students in a university setting"/></div></section>
+    <section className="section-pad border-y border-[#eadfce] bg-[#fffaf2]"><div className="container-shell grid gap-5 md:grid-cols-2">{values.map(([t,d])=><article key={t} className="rounded-3xl border border-[#eadfce] bg-white p-7"><h3 className="serif text-2xl font-bold text-[#13233f]">{t}</h3><p className="mt-3 leading-7 text-[#687080]">{d}</p></article>)}</div></section>
+    <section className="section-pad"><div className="container-shell rounded-[32px] bg-[#13233f] p-9 text-white md:p-12"><div className="eyebrow !text-[#e5c47d]">Recognition</div><h2 className="serif mt-3 text-4xl font-bold">Official status</h2><div className="mt-8 grid gap-4 md:grid-cols-3">{[["2025","Year Established"],["Act 14","Sikkim Legislative Assembly"],["UGC","Section 2(F) Recognition"]].map(([a,b])=><div key={b} className="rounded-2xl border border-white/10 bg-white/5 p-6"><div className="serif text-3xl font-bold text-[#e5c47d]">{a}</div><div className="mt-2 text-sm text-white/65">{b}</div></div>)}</div><Link href="/admissions" className="btn-primary mt-8">Explore Admissions</Link></div></section>
+    <SiteFooter/></main>
+}
