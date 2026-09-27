@@ -32,11 +32,17 @@ export default function SiteHeader() {
       </div>
 
       <header className="sticky top-0 z-50 border-b border-[#eadfce] bg-white/95 backdrop-blur-xl">
-        <div className="container-shell flex min-h-[76px] items-center justify-between gap-5">
-          <Link href="/" className="flex items-center gap-3 py-2">
-            <img src="/sengol-logo.png" alt="Sengol International University" className="h-[64px] w-[82px] object-contain" />
-            <div className="hidden sm:block max-w-[220px]">
-              <div className="serif text-[18px] font-bold uppercase leading-[1.02] text-[#17243a]">Sengol International University</div>
+        <div className="container-shell flex min-h-[84px] items-center justify-between gap-5">
+          <Link href="/" className="flex items-center gap-3 py-1">
+            <div className="flex h-[78px] w-[104px] shrink-0 items-center justify-center overflow-visible">
+              <img
+                src="/sengol-logo.png?v=3"
+                alt="Sengol International University logo"
+                className="h-full w-full object-contain drop-shadow-[0_2px_2px_rgba(0,0,0,0.12)]"
+              />
+            </div>
+            <div className="hidden sm:block max-w-[230px]">
+              <div className="serif text-[19px] font-bold uppercase leading-[1.02] text-[#17243a]">Sengol International University</div>
               <div className="mt-1 text-[8px] font-bold uppercase tracking-[.19em] text-[#9a7028]">Knowledge · Innovation · Global Impact</div>
             </div>
           </Link>
